@@ -65,8 +65,8 @@ const Header = () => {
         {/* -------------- nav items --------------- */}
         <ul className="gap-1 w-auto hidden md:flex">
           {navItems.map((item) => (
-            <Link key={item.name} to={item.url}>
-              <li className="px-2 py-2 font-semibold text-slate-900/80 hover:text-slate-950 duration-200">{item.name}</li>
+            <Link key={item.name} to={item.url} className="outline-slate-800/10 rounded-[5px]">
+              <li className="px-2 py-2 font-semibold text-slate-900/80 hover:text-slate-950 duration-200 ">{item.name}</li>
             </Link>
           ))}
         </ul>

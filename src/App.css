@@ -40,3 +40,15 @@
 .read-the-docs {
   color: #888;
 } */
+
+::-webkit-scrollbar{
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-thumb{
+  border-radius: 3px;
+  background:rgba(22, 22, 22, 0.76);
+}
+::-webkit-scrollbar-track{
+  background: rgb(219, 219, 219);
+}
