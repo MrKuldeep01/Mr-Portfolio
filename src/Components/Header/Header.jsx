@@ -6,8 +6,9 @@ const Header = () => {
     { url: "/", name: "Home" },
     { url: "/about", name: "About" },
     { url: "/skills", name: "Skills" },
+    { url: "/education", name: "Education" },
     { url: "/projects", name: "Projects" },
-    { url: "/contect", name: "Contect" },
+    { url: "/contect", name: "Contect" }, 
   ];
 
   const [onHam, setOnHam] = useState(false);

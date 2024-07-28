@@ -13,8 +13,8 @@ const Skills = () => {
         My technical level
       </p>
     </span>
-    <div className="bottom w-[90vw] h-auto flex flex-col overflow-x-auto overflow-y-hidden scroll-smooth px-2 py-12 gap-8 md:flex-row items-center flex-nowrap relative">
-      <div id='frontend' className=" left-most w-[90%]  md:min-w-[50%] min-h-[242px] flex-col px-6 py-4  items-center border border-black/30 rounded-lg justify-center"> 
+    <div className="bottom w-[90vw] h-auto my-6 flex flex-col md:overflow-x-auto md:overflow-y-hidden scroll-smooth px-2 py-12 gap-8 md:flex-row overflow-y-auto overflow-x-hidden items-center flex-nowrap relative">
+      <div id='frontend' className=" left-most w-[90%]  md:min-w-[50%] h-auto md:min-h-[242px] flex-col px-6 py-4  items-center border border-black/30 rounded-lg justify-center"> 
         <h2 className="skillheader mb-4 w-full text-center text-lg font-semibold text-slate-900">Frontend Development </h2>
         <div className="skillscards flex gap-2 items-center justify-evenly flex-wrap">
           {/* ======== skill card =========== */}
@@ -43,7 +43,7 @@ const Skills = () => {
         </div>
 
       </div>
-      <div id='backend' className="second-left w-[90%]  md:min-w-[50%] min-h-[242px] flex-col px-6 py-4  items-center border border-black/30 rounded-lg justify-center">
+      <div id='backend' className="second-left w-[90%]  md:min-w-[50%] h-auto md:min-h-[242px] flex-col px-6 py-4  items-center border border-black/30 rounded-lg justify-center">
         <h2 className="skillheader mb-4 w-full text-center text-lg font-semibold text-slate-900">Backend Development </h2>
         <div className="skillscards flex items-center justify-evenly flex-wrap">
           {/* ======== skill card =========== */}
@@ -67,7 +67,7 @@ const Skills = () => {
         </div>
 
       </div>
-      <div id='devtools' className="right-most w-[90%]  md:min-w-[50%] min-h-[242px] flex-col px-6 py-4  items-center border border-black/30 rounded-lg justify-center">
+      <div id='devtools' className="right-most w-[90%]  md:min-w-[50%] h-auto md:min-h-[242px] flex-col px-6 py-4  items-center border border-black/30 rounded-lg justify-center">
         <h2 className="skillheader mb-4 w-full text-center text-lg font-semibold text-slate-900">Development tools </h2>
         <div className="skillscards flex items-center justify-evenly flex-wrap">
           {/* ======== skill card =========== */}

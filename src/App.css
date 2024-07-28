@@ -50,5 +50,6 @@
   background:rgba(22, 22, 22, 0.76);
 }
 ::-webkit-scrollbar-track{
+  border-radius: 3px;
   background: rgb(219, 219, 219);
 }
