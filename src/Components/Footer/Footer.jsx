@@ -5,7 +5,7 @@ const Footer = () => {
   return (
     <footer className='w-full min-h-[50vh] flex-col items-center justify-evenly bg-gray-100 border-t'>
       {/* <div className="footerbar"></div> */}
-      <span className="myname text-4xl font-mono font-semibold text-slate-800 block text-center pt-8 pb-4">Kuldeep kumar</span>
+      <span className="myname text-4xl font-mono font-semibold text-slate-800 w-full flex items-center justify-center gap-2 pt-8 pb-4 ">Kuldeep kumar  <img src="/webicon.svg" alt="Mr kumar" className='w-20' /> </span>
       <span className="linkes w-full flex items-center justify-center gap-2 border-b ">
         <Link to={'/about'} className=' text-sm text-slate-700/70 duration-200 hover:text-slate-700 px-2 py-2 font-semibold'>
         About

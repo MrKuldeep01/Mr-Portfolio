@@ -1,11 +1,7 @@
 import React from 'react'
 
 const Logo = () => {
-  return (
-    <span className='font-extrabold text-lg font-mono '>
-      Mr kumar
-    </span>
-  )
+  return <img src="/webicon.svg" alt="Mr kumar" className='w-14' />
 }
 
 export default Logo
