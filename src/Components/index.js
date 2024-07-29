@@ -1,6 +1,6 @@
 import BigButton from "./BigButton.jsx";
 import ClientCard from "./ClientCard.jsx";
-import ContectCard from "./ContectCard.jsx";
+import ContactCard from "./ContactCard.jsx";
 import Education from "./Education.jsx";
 import Home from "./Home.jsx";
 import Input from "./InputCom.jsx";
@@ -9,7 +9,7 @@ import Header from "./Header/Header.jsx";
 import Footer from "./Footer/Footer.jsx";
 import ProjectCard from "./ProjectCard.jsx";
 import About from "./About.jsx";
-import Contect from "./Contect.jsx";
+import Contact from "./Contact.jsx";
 import Logo from "./Logo.jsx";
 import Projects from "./Projects.jsx";
 
@@ -20,10 +20,10 @@ export {
   ClientCard,
   BigButton,
   Input,
-  ContectCard,
+  ContactCard,
   ProjectCard,
   About,
-  Contect,
+  Contact,
   Header,
   Projects,
   Logo,
