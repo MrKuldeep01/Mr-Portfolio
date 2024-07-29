@@ -12,7 +12,7 @@ const Home = () => {
       <p className="rolename text-lg w-auto text-gray-700/70 font-semibold">web dev.</p>
       </span>
       <p className="overview py-2 my-4 sm:w-[90%] w-full text-gray-700/70 font-semibold ">
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam perspiciatis corporis ea, aspernatur asperiores.</p>
+      A keen and enthusiastic fresher web developer, always ready to learn new things. Passionate about building web solutions and improving skills every day.</p>
       <BigButton  Childrens={"Say hello! ☕"} className=" rounded-xl" />  
       {/* <button className="scroll text-sm font-semibold text-gray-700/70 px-4 py-2 rounded-lg bg-gray-400/10 mt-20 hidden sm:block"> scroll down 👇</button> */}
       </div>

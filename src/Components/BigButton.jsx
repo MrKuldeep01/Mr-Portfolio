@@ -1,9 +1,9 @@
 import React from 'react'
 
-const BigButton = ({Childrens,bgColor="bg-black/90",textColor="text-white",className="",...props}) => {
-  return (
-    <button className={` text-xl px-6 py-4 font-semibold ${bgColor} ${textColor} ${className} `} {...props}>
-      {Childrens}
+const BigButton = ({Children,bgColor="bg-black/80",textColor="text-white",className="",...props}) => {
+  return Children && (
+    <button className={`capitalize text-xl px-4 py-3 rounded-xl font-semibold hover:bg-black ${bgColor} ${textColor} ${className} `} {...props}>
+      {Children}
     </button>
   )
 }
