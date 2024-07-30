@@ -1,5 +1,6 @@
 import React from "react";
-import {BigButton} from "./index"
+import { BigButton } from "./index";
+import { Link } from "react-router-dom";
 const About = () => {
   return (
     <div className="about pt-24 w-full min-h-screen flex flex-col items-center justify-start">
@@ -21,25 +22,35 @@ const About = () => {
             />
           </div>
         </div>
-        <div className=" right w-full  sm:w-1/2 h-full flex-col sm:px-10 py-4 gap-4">
-          <div className="cards w-full flex items-center justify-evenly my-4">
-            <div className="m-1 card p-4 md:flex flex-col gap-1 items-center justify-center border rounded-lg max-w-[150px]">
+        <div className=" right w-full  sm:w-1/2 h-full flex-col sm:px-10 py-4 px-8 gap-4">
+          <div className="cards w-full flex items-center justify-evenly my-4 ">
+            <Link to={"/education"} className="m-1 card p-4 md:flex flex-col gap-1 items-center justify-center border rounded-lg max-w-[150px]">
               <span className="text-sm font-semibold "> Post graduated </span>
               <p className="text-xs font-medium text-slate-800/80">
-              (MDU) 2022 - 2024
+                (MDU) 2022 - 2024
               </p>
-            </div>
-            <div className="m-1 card p-4 flex flex-col gap-1 items-center justify-center border rounded-lg max-w-[150px]">
+            </Link>
+            <Link to={"/projects"}  className="m-1 card p-4 flex flex-col gap-1 items-center justify-center border rounded-lg max-w-[150px]">
               <span className="text-sm font-semibold"> Projects soled </span>
               <p className="text-xs font-medium text-slate-800/80">
                 4+ mini projects
               </p>
-            </div>
+            </Link>
           </div>
-          <div className="details py-4 px-2 w-[90%] text-slate-800/80 font-semibold text-justify">
-          A dedicated and enthusiastic fresher web developer, always eager to learn and adapt to new technologies and methodologies. Passionate about creating innovative web solutions and continuously enhancing skills through hands-on experience and continuous learning.
+          <div className="details py-4 px-2 w-[90%] md:space-x-1 text-slate-800/80 font-semibold text-justify">
+            A dedicated and enthusiastic fresher web developer, always eager to
+            learn and adapt to new technologies and methodologies. Passionate
+            about creating innovative web solutions and continuously enhancing
+            skills through hands-on experience and continuous learning.
           </div>
-          <BigButton Childrens={"Download CV "} className="rounded-lg duration-200 hover:bg-black" bgColor="bg-black/90" />
+          <BigButton
+            Children={<> <Link target="_blank"
+              to={"https://drive.google.com/file/d/1h1tGNt7YaxhDiBa1LrvIYFddkczumH15/view?usp=sharing"}
+              > Download CV </Link>
+              </>}
+                 className="rounded-lg duration-200 hover:bg-black"
+            bgColor="bg-black/90"
+          />
         </div>
       </div>
     </div>

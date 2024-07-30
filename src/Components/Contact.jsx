@@ -1,14 +1,13 @@
 import React, { useState } from "react";
 import { ContactCard, BigButton, Input } from "./index";
-import emailjs from "emailjs-com";
-import envConfig from "../../config/envConfig.js"
+import envConfig from "../../config/envConfig";
+
 const Contact = () => {
   const [formData, setFormData] = useState({
     name: "",
     mail: "",
     message: "",
   });
-  console.log(envConfig);
   const [responseMessage, setResponseMessage] = useState("");
   const formChange = (e) => {
     const { name, value } = e.target;
@@ -16,22 +15,6 @@ const Contact = () => {
       ...formData,
       [name]: value,
     });
-  };
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    emailjs
-      .send(envConfig.emailjsServiceId, envConfig.emailjsTemplateId, formData )
-      .then(
-        (result) => {
-          setResponseMessage("Message sent successfully");
-          console.log(result)
-          setFormData({ name: "", mail: "", message: "" });
-        },
-        (error) => {
-          console.log(error)
-          setResponseMessage("Error sending message ");
-        }
-      );
   };
 
   return (
@@ -68,9 +51,10 @@ const Contact = () => {
           Contact me{" "}
         </h1>
         <form
-          onSubmit={handleSubmit}
+           action="https://api.web3forms.com/submit" method="POST"
           className="contenttocontact md:w-[60%] w-full flex-col md:px-6 px-1 py-2 "
         >
+           <input type="hidden" name="access_key" value={envConfig.formAccessKey}/>
           <Input
             label={"name "}
             name="name"

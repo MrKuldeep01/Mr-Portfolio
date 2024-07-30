@@ -1,4 +1,4 @@
-const emailjsServiceId = String(import.meta.VITE_EMAILJS_SERVICE_ID) 
-const emailjsTemplateId = String(import.meta.VITE_EMAILJS_TEMPLATE_ID) 
+const formAccessKey = import.meta.env.VITE_FORM_ACCESSKEY;
 
-export default {emailjsServiceId,emailjsTemplateId}
+!formAccessKey && console.log("formAccessKey not defined");
+export default { formAccessKey };

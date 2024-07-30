@@ -1,6 +1,7 @@
 import BigButton from "./BigButton.jsx";
 import ContactCard from "./ContactCard.jsx";
 import Education from "./Education.jsx";
+import EducationCard from "./EduCard.jsx";
 import Home from "./Home.jsx";
 import Input from "./InputCom.jsx";
 import Skills from "./Skills.jsx";
@@ -15,6 +16,7 @@ import Logo from "./Logo.jsx";
 export {
   Home,
   Skills,
+  EducationCard,
   Education,
   BigButton,
   Input,

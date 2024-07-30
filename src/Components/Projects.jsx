@@ -13,7 +13,7 @@ const Projects = () => {
           Logic oriented
         </p>
       </span>
-      <div className="bottom  md:px-10 px-4 py-12 w-[90vw] h-auto my-6 flex flex-col md:flex-row overflow-y-auto overflow-x-hidden items-center justify-start flex-nowrap md:overflow-x-auto md:overflow-y-hidden scroll-smooth gap-8 relative">
+      <div className="bottom md:px-10 px-4 py-12 w-[90vw] h-auto my-6 flex flex-col md:flex-row overflow-y-auto overflow-x-hidden items-center justify-start flex-nowrap md:overflow-x-auto md:overflow-y-hidden scroll-smooth gap-8 relative">
         {/* =================demo card================= */}
         {/* <div
           className=" left-most w-[90%]  md:min-w-[50%] h-auto md:min-h-[242px] flex-col px-6 py-4  items-center border border-black/30 rounded-lg justify-center relative "
