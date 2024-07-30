@@ -32,10 +32,10 @@ const Education = () => {
             </span>
           </div>
           <div className="details my-4 flex gap-2 items-center justify-between flex-wrap">
-            <span className="px-4 py-2 text-base font-semibold text-slate-800/70">
+            <span className="px-4 py-2 sm:text-base text-sm font-semibold text-slate-800/70">
               from MDU ROHTAK
             </span>
-            <span className="px-4 py-2 text-sm font-semibold text-slate-800/70">
+            <span className="px-4 py-2 text-xs sm:text-sm font-semibold text-slate-800/70">
               {" "}
               (2019- 2022){" "}
             </span>
@@ -66,10 +66,10 @@ const Education = () => {
             </span>
           </div>
           <div className="details my-4 flex gap-2 items-center justify-between flex-wrap">
-            <span className="px-4 py-2 text-base font-semibold text-slate-800/70">
+            <span className="px-4 py-2 sm:text-base text-sm font-semibold text-slate-800/70">
               from MDU ROHTAK{" "}
             </span>
-            <span className="px-4 py-2 text-sm font-semibold text-slate-800/70">
+            <span className="px-4 py-2 text-xs sm:text-sm font-semibold text-slate-800/70">
               {" "}
               (2022- 2024){" "}
             </span>

@@ -1,6 +1,39 @@
-import React from "react";
+import React, { useState } from "react";
 import { ContactCard, BigButton, Input } from "./index";
+import emailjs from "emailjs-com";
+import envConfig from "../../config/envConfig.js"
 const Contact = () => {
+  const [formData, setFormData] = useState({
+    name: "",
+    mail: "",
+    message: "",
+  });
+  console.log(envConfig);
+  const [responseMessage, setResponseMessage] = useState("");
+  const formChange = (e) => {
+    const { name, value } = e.target;
+    setFormData({
+      ...formData,
+      [name]: value,
+    });
+  };
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    emailjs
+      .send(envConfig.emailjsServiceId, envConfig.emailjsTemplateId, formData )
+      .then(
+        (result) => {
+          setResponseMessage("Message sent successfully");
+          console.log(result)
+          setFormData({ name: "", mail: "", message: "" });
+        },
+        (error) => {
+          console.log(error)
+          setResponseMessage("Error sending message ");
+        }
+      );
+  };
+
   return (
     <div className="content w-full min-h-screen pt-24 px-10 flex md:flex-row items-center justify-center flex-col gap-4">
       <div className="leftbox w-full h-full md:w-[30%]  md:h-screen flex-col items-end justify-center gap-0">
@@ -34,19 +67,22 @@ const Contact = () => {
           {" "}
           Contact me{" "}
         </h1>
-        <div className="contenttocontact md:w-[60%] w-full flex-col md:px-6 px-1 py-2 ">
+        <form
+          onSubmit={handleSubmit}
+          className="contenttocontact md:w-[60%] w-full flex-col md:px-6 px-1 py-2 "
+        >
           <Input
             label={"name "}
             name="name"
             placeholder="enter your name"
-            className=""
+            onChange={formChange}
             parentClassName="my-8 "
           />
           <Input
             label={"mail "}
             name="mail"
             placeholder="enter your mail"
-            className=""
+            onChange={formChange}
             parentClassName="my-8 "
           />
           {/* ==================== textarea ============ */}
@@ -63,15 +99,25 @@ const Contact = () => {
             <textarea
               id={"message"}
               name={"message"}
+              onChange={formChange}
               className={`px-4 py-2 bg-transparent border-none w-full outline-none text-base font-semibold min-h-[120px] resize-none`}
               placeholder="message you wanna send 🚀😇"
               spellCheck="false"
             />
           </div>
+          {responseMessage && (
+            <p className="text-red-600 font-semibold bg-white/20 rounded-lg px-4 py-2">
+              {responseMessage}
+            </p>
+          )}
           <BigButton
-         Children={<>send message  <i class="ri-send-plane-fill"></i></>}
+            Children={
+              <>
+                send message <i className="ri-send-plane-fill"></i>
+              </>
+            }
           />
-        </div>
+        </form>
       </div>
     </div>
   );

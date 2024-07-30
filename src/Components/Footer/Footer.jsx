@@ -21,16 +21,16 @@ const Footer = () => {
       </span>
       <span className="medialinks w-full flex items-center justify-center gap-2 my-4 py-4 ">
         <Link to={"https://github.com/mrkuldeep01/"} className='bg-black/80 hover:bg-black duration-200 text-white px-2 py-1 font-medium rounded-md'>
-        <i class="ri-github-fill"></i>
+        <i className="ri-github-fill"></i>
         </Link>
         <Link to={"https://linkedin.com/in/kuldeep-kumar-a4b71a258"} className='bg-black/80 hover:bg-black duration-200 text-white px-2 py-1 font-medium rounded-md'>
-        <i class="ri-linkedin-box-fill"></i>
+        <i className="ri-linkedin-box-fill"></i>
         </Link>
         <Link to={"mailto:kkharoliya20@gmail.com"} className='bg-black/80 hover:bg-black duration-200 text-white px-2 py-1 font-medium rounded-md'>
-        <i class="ri-mail-add-fill"></i>
+        <i className="ri-mail-add-fill"></i>
         </Link>
         </span>
-        <p className="copyright  text-sm text-slate-700/70 px-2 py-2 font-semibold text-center"><i class="ri-copyright-line"></i> mr-kumar - All rights reserved <br /> ( july 2024 )</p>
+        <p className="copyright  text-sm text-slate-700/70 px-2 py-2 font-semibold text-center"><i className="ri-copyright-line"></i> mr-kumar - All rights reserved <br /> ( july 2024 )</p>
     </footer>
   )
 }
