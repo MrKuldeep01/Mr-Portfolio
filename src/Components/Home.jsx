@@ -31,11 +31,11 @@ const Home = () => {
       </div>
 
       <div className="rightside w-full my-8  sm:w-1/2 sm:my-4 h-full flex items-center justify-center">
-        <div className="image w-[250px] h-[250px] bg-black/20 rounded-[40%] rotate-[35deg] p-4 border-8 border-black shadow-2xl shadow-slate-950 ">
+        <div className="image w-[250px] h-[250px] rounded-[40%] rotate-[35deg] border-4 border-black shadow-lg shadow-slate-950 overflow-hidden bg-black">
           <img
-            src="/developer.svg"
-            alt="kuldeep image"
-            className="w-full h-full object-cover -rotate-[35deg] p-2"
+            src="/me.png"
+            alt="kuldeep image" 
+            className="w-full h-full object-fill -rotate-[35deg] rounded-[45%] "
           />
         </div>
       </div>

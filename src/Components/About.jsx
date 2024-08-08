@@ -18,6 +18,7 @@ const About = () => {
             <img
               src="/imgMe.PNG"
               alt="myimage"
+              loading="lazy"
               className="w-full h-full object-cover"
             />
           </div>
