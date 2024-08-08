@@ -1,6 +1,8 @@
 import React from 'react'
 
 const EducationCard = ({degreename,percent="64",uniname,session="year-year",desc="details of your degree to showcase 💜"}) => {
+  const percentNum = Number(percent) + "%" || percent + "%" ;
+  console.log(typeof percentNum +" " + percentNum); 
   return degreename && uniname && (
     <div
     id={degreename}
@@ -15,9 +17,9 @@ const EducationCard = ({degreename,percent="64",uniname,session="year-year",desc
       <h2 className="skillheader mb-4 w-full text-center text-lg font-semibold text-slate-900">
         {degreename}
       </h2>
-      <p className={`w-[${percent}%] h-[2px] rounded-full bg-black absolute -bottom-[2px] left-0`}></p>
+      <p style={{width:`${percentNum}`}} className={`h-[2px] rounded-full bg-black absolute -bottom-[2px] left-0`}></p>
       <span className=" absolute -bottom-3 right-0 text-xs text-slate-700/50 bg-white px-1 py-1 rounded-lg ">
-        {percent}%
+        {percentNum}
       </span>
     </div>
     <div className="details my-4 flex gap-1 sm:gap-2 items-center justify-between flex-wrap">
