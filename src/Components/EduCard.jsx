@@ -2,7 +2,6 @@ import React from 'react'
 
 const EducationCard = ({degreename,percent="64",uniname,session="year-year",desc="details of your degree to showcase 💜"}) => {
   const percentNum = Number(percent) + "%" || percent + "%" ;
-  console.log(typeof percentNum +" " + percentNum); 
   return degreename && uniname && (
     <div
     id={degreename}
