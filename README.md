@@ -3,10 +3,11 @@
 ##### Post Graduated with M.C.A from ( M.D.Uni. ) in 2022-2024
 
 <center>
+            <!-- className="w-[400px] h-[400px] rounded-[20%] my-4" -->
 <img
-            src="/me.png"
+            src="./public/me.png"
             alt="kuldeep image" 
-            className="w-[400px] h-[400px] rounded-xl my-4"
+            style="height:250px; margin:0 .5rem; border-radius:50%; border:2px solid white; padding:8px; "
           />
 </center>
 
