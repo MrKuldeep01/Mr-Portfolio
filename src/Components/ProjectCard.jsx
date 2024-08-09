@@ -11,10 +11,8 @@ const ProjectCard = ({
 }) => {
   const navigate = useNavigate();
   return (
-    <div
-      onClick={() => {
-        navigate(codelink);
-      }}
+    <Link
+      to={codelink}
       title={desc}
       className={`left-most px-6 py-4 w-[95%] md:w-[50%] md:min-w-[50%] h-[320px] flex-col items-center border border-black/30 rounded-lg justify-center overflow-hidden relative cursor-pointer ${className}`}
     >
@@ -39,7 +37,7 @@ const ProjectCard = ({
           Demo
         </Link>
       </span>
-    </div>
+    </Link>
   );
 };
 
