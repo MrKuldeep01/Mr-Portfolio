@@ -46,7 +46,7 @@ const About = () => {
           </div>
           <BigButton
             Children={<> <Link target="_blank"
-              to={"https://drive.google.com/file/d/1h1tGNt7YaxhDiBa1LrvIYFddkczumH15/view?usp=sharing"}
+              to={"https://drive.google.com/file/d/160-lR4XOAoBkdR7b4Vx85sc6IZegVMJL/view"}
               > Download CV </Link>
               </>}
                  className="rounded-lg duration-200 hover:bg-black"
