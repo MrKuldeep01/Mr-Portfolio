@@ -57,10 +57,10 @@ const Skills = () => {
           </div>
           <div className="skillcard  m-2 px-4 py-2 border rounded-lg">
             <h3 className="skillname font-semibold text-center">MongoDB</h3>
-            <span className="text-slate-800/80 font-semibold text-xs text-left">Basic</span>
+            <span className="text-slate-800/80 font-semibold text-xs text-left">Intermediat</span>
           </div>
           <div className="skillcard  m-2 px-4 py-2 border rounded-lg">
-            <h3 className="skillname font-semibold text-center">Python</h3>
+            <h3 className="skillname font-semibold text-center">SQL</h3>
             <span className="text-slate-800/80 font-semibold text-xs text-left">Basic</span>
           </div>
         
@@ -74,6 +74,10 @@ const Skills = () => {
           <div className="skillcard  m-2 px-4 py-2 border rounded-lg">
             <h3 className="skillname font-semibold text-center">VS Code</h3>
             <span className="text-slate-800/80 font-semibold text-xs text-left">Intermediat</span>
+          </div>
+          <div className="skillcard  m-2 px-4 py-2 border rounded-lg">
+            <h3 className="skillname font-semibold text-center">Postman API</h3>
+            <span className="text-slate-800/80 font-semibold text-xs text-left">Basic</span>
           </div>
           <div className="skillcard  m-2 px-4 py-2 border rounded-lg">
             <h3 className="skillname font-semibold text-center">Netlify</h3>
