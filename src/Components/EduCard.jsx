@@ -17,7 +17,7 @@ const EducationCard = ({degreename,percent="64",uniname,session="year-year",desc
         {degreename}
       </h2>
       <p style={{width:`${percentNum}`}} className={`h-[2px] rounded-full bg-black absolute -bottom-[2px] left-0`}></p>
-      <span className=" absolute -bottom-3 right-0 text-xs text-slate-700/50 bg-white px-1 py-1 rounded-lg ">
+      <span className=" absolute -bottom-3 right-0 text-xs text-black/60 font-semibold bg-white/60 px-2 py-1 rounded-lg ">
         {percentNum}
       </span>
     </div>
@@ -30,7 +30,7 @@ const EducationCard = ({degreename,percent="64",uniname,session="year-year",desc
         ({session})
       </span>
     </div>
-    <p className="edudetails w-[90%] text-slate-800/30 font-semibold text-sm text-justify block mx-auto  my-4">
+    <p className="edudetails w-[90%] text-slate-900/50 font-semibold text-sm text-justify block mx-auto  my-4">
     {desc}
     </p>
   </div>

@@ -23,6 +23,12 @@ const Footer = () => {
         <Link to={"https://github.com/mrkuldeep01/"} className='bg-black/80 hover:bg-black duration-200 text-white px-2 py-1 font-medium rounded-md'>
         <i className="ri-github-fill"></i>
         </Link>
+        <Link to={"https://x.com/weAreDev01"} className='bg-black/80 hover:bg-black duration-200 text-white px-2 py-1 font-medium rounded-md'>
+        <i className="ri-twitter-fill"></i>
+        </Link>
+        <Link to={"https://t.me/weAreDev01"} className='bg-black/80 hover:bg-black duration-200 text-white px-2 py-1 font-medium rounded-md'>
+        <i className="ri-telegram-fill"></i>
+        </Link>
         <Link to={"https://linkedin.com/in/kuldeep-kumar-a4b71a258"} className='bg-black/80 hover:bg-black duration-200 text-white px-2 py-1 font-medium rounded-md'>
         <i className="ri-linkedin-box-fill"></i>
         </Link>

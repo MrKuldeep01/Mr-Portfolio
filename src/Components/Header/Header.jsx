@@ -75,9 +75,9 @@ const Header = () => {
     setOnHam((pre) => !pre);
   };
   return (
-    <header className="w-full backdrop-blur-lg px-4 py-2 mt-0 mb-2 shadow-lg shadow-black-100/40 fixed top-0 left-0 z-40">
+    <header className="w-full backdrop-blur-lg px-4 py-1 mt-0 mb-2 shadow-lg shadow-black-100/40 fixed top-0 left-0 z-40">
       <nav className="w-full flex items-center justify-between px-8 py-0">
-        <Link to={"/"} className="logo outline-none p-1 ml-2 rounded-full bg-white/20 ">
+        <Link to={"/"} className="logo outline-none sm:ml-1 rounded-full bg-white/10 ">
           <Logo />
         </Link>
 

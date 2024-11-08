@@ -17,7 +17,7 @@ const Input = ({
       id={id+name}
         name={name}
         type={type}
-        className={`px-4 py-2 bg-transparent border-none w-full outline-none text-white/70 text-base font-semibold ${className} `}
+        className={`px-4 py-2 bg-transparent border-none w-full outline-none text-white/70 text-base font-semibold placeholder:text-white/70 ${className} `}
         placeholder={placeholder}
         {...props}
       />

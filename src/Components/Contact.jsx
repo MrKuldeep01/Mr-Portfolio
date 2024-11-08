@@ -126,7 +126,7 @@ const Contact = () => {
               id={"message"}
               name={"message"}
               onChange={formChange}
-              className={`px-4 py-2 bg-transparent border-none w-full outline-none text-base text-white/70 font-semibold min-h-[120px] resize-none`}
+              className={`px-4 py-2 bg-transparent border-none w-full outline-none text-base text-white/70 font-semibold min-h-[120px] resize-none placeholder:text-white/70`}
               placeholder="message you wanna send 🚀😇"
               spellCheck="false"
             />
