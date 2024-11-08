@@ -1,11 +1,11 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-
+import Logo from '../Logo.jsx'
 const Footer = () => {
   return (
-    <footer className='w-full min-h-[50vh] flex-col items-center justify-evenly bg-gray-100 border-t'>
+    <footer className='w-full min-h-[50vh] flex-col items-center justify-evenly bg-transparent border-t'>
       {/* <div className="footerbar"></div> */}
-      <span className="myname text-2xl font-mono font-bold text-slate-800/90 w-full flex items-center justify-center gap-2 pt-8 pb-4 ">Mr kumar <img src="/webicon.svg" alt="Mr kumar" className='w-20' /> </span>
+      <span className="myname text-2xl font-mono font-bold text-slate-900/90 w-full flex items-center justify-center gap-1 pt-8 pb-4 ">Mr kumar <Logo classes='size-24'/></span>
       <span className="linkes w-full flex items-center justify-center gap-2 border-b border-gray-400/20 ">
       
         <Link to={'/about'} className=' text-sm text-slate-700/70 duration-200 hover:text-slate-700 px-2 py-2 font-semibold'>

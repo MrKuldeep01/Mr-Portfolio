@@ -3,12 +3,71 @@ import { Logo, BigButton } from "../";
 import { Link, NavLink } from "react-router-dom";
 const Header = () => {
   const navItems = [
-    { url: "/", name: <><p className=" md:inline-block hidden "> Home </p> <i className="ri-home-heart-line md:hidden inline-block"></i></>,title:"Home" },
-    { url: "/about", name: <> <p className=" md:inline-block hidden "> About </p>  <i className="ri-user-6-fill md:hidden inline-block"></i></> ,title:"About" },
-    { url: "/skills", name: <> <p className=" md:inline-block hidden "> Skills </p> <i className="ri-palette-line md:hidden inline-block"></i> </> ,title:"Skills" },
-    { url: "/education", name: <> <p className=" md:inline-block hidden "> Education </p> <i className="ri-stairs-fill md:hidden inline-block"></i> </> ,title:"Education" },
-    { url: "/projects", name: <> <p className=" md:inline-block hidden "> Projects </p> <i className="ri-gallery-fill md:hidden inline-block"></i> </> ,title:"Projects" },
-    { url: "/contact", name: <> <p className=" md:inline-block hidden "> Contact </p> <i className="ri-contacts-fill md:hidden inline-block"></i> </> ,title:"Contact" }, 
+    {
+      url: "/",
+      name: (
+        <>
+          <p className=" md:inline-block hidden "> Home </p>{" "}
+          <i className="ri-home-heart-line md:hidden inline-block"></i>
+        </>
+      ),
+      title: "Home",
+    },
+    {
+      url: "/about",
+      name: (
+        <>
+          {" "}
+          <p className=" md:inline-block hidden "> About </p>{" "}
+          <i className="ri-user-6-fill md:hidden inline-block"></i>
+        </>
+      ),
+      title: "About",
+    },
+    {
+      url: "/skills",
+      name: (
+        <>
+          {" "}
+          <p className=" md:inline-block hidden "> Skills </p>{" "}
+          <i className="ri-palette-line md:hidden inline-block"></i>{" "}
+        </>
+      ),
+      title: "Skills",
+    },
+    {
+      url: "/education",
+      name: (
+        <>
+          {" "}
+          <p className=" md:inline-block hidden "> Education </p>{" "}
+          <i className="ri-stairs-fill md:hidden inline-block"></i>{" "}
+        </>
+      ),
+      title: "Education",
+    },
+    {
+      url: "/projects",
+      name: (
+        <>
+          {" "}
+          <p className=" md:inline-block hidden "> Projects </p>{" "}
+          <i className="ri-gallery-fill md:hidden inline-block"></i>{" "}
+        </>
+      ),
+      title: "Projects",
+    },
+    {
+      url: "/contact",
+      name: (
+        <>
+          {" "}
+          <p className=" md:inline-block hidden "> Contact </p>{" "}
+          <i className="ri-contacts-fill md:hidden inline-block"></i>{" "}
+        </>
+      ),
+      title: "Contact",
+    },
   ];
 
   const [onHam, setOnHam] = useState(false);
@@ -17,8 +76,8 @@ const Header = () => {
   };
   return (
     <header className="w-full backdrop-blur-lg px-4 py-2 mt-0 mb-2 shadow-lg shadow-black-100/40 fixed top-0 left-0 z-40">
-      <nav className="w-full flex items-center justify-between px-8 py-2">
-        <Link to={"/"} className="logo outline-none ">
+      <nav className="w-full flex items-center justify-between px-8 py-0">
+        <Link to={"/"} className="logo outline-none p-1 ml-2 rounded-full bg-white/20 ">
           <Logo />
         </Link>
 
@@ -65,8 +124,15 @@ const Header = () => {
         {/* -------------- nav items --------------- */}
         <ul className="gap-1 w-auto hidden md:flex">
           {navItems.map((item) => (
-            <Link key={item.url} to={item.url} title={item.title} className="outline-slate-800/10 rounded-[5px]">
-              <li className="px-2 py-2 font-semibold text-slate-900/80 hover:text-slate-950 duration-200 ">{item.name}</li>
+            <Link
+              key={item.url}
+              to={item.url}
+              title={item.title}
+              className="outline-slate-800/10 rounded-[5px]"
+            >
+              <li className="px-2 py-2 font-semibold text-slate-900/80 hover:text-slate-950 duration-200 ">
+                {item.name}
+              </li>
             </Link>
           ))}
         </ul>

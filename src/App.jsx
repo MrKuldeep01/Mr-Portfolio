@@ -1,4 +1,4 @@
-import "./App.css";
+import React from 'react'
 import { Header, Footer } from "./Components";
 import { Outlet } from "react-router-dom";
 function App() {

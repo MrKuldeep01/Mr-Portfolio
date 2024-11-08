@@ -11,12 +11,12 @@ const Home = () => {
           Kuldeep kumar 👋
         </h2>
         <span className="role flex items-center justify-start gap-2">
-          <p className="w-1/5 border"></p>
+          <p className="w-1/5 border border-white/40"></p>
           <p className="rolename text-lg w-auto text-gray-700/70 font-semibold">
             web dev.
           </p>
         </span>
-        <p className="overview py-2 my-4 sm:w-[90%] w-full text-gray-700/70 font-semibold ">
+        <p className="overview py-2 my-4  sm:w-[90%] w-full text-gray-700/70 font-semibold ">
           A keen and enthusiastic fresher web developer, always ready to learn
           new things. Passionate about building web solutions and improving
           skills every day.
@@ -31,7 +31,7 @@ const Home = () => {
       </div>
 
       <div className="rightside w-full my-8  sm:w-1/2 sm:my-4 h-full flex items-center justify-center">
-        <div className="image w-[250px] h-[250px] rounded-[40%] rotate-[35deg] border-4 border-black shadow-lg shadow-slate-950 overflow-hidden bg-black">
+        <div className="image w-[250px] h-[250px] rounded-[40%] rotate-[40deg] border-4 border-[#9E9E9E] shadow-lg shadow-slate-950 overflow-hidden bg-[#9E9E9E]">
           <img
             src="/me.png"
             alt="kuldeep image" 

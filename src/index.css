@@ -1,6 +1,32 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+:root{
+
+  /* --colorA : #534096;
+  --colorB : #0E164C;
+  --colorC : #548CE9; */
+  --colorA : #3700ff83;
+  --colorB : #0022ff7e;
+  --colorC : #0062ff7a;
+
+}
+body{
+  background: linear-gradient(-50deg, var(--colorB), var(--colorA), var(--colorC));
+}
+::-webkit-scrollbar{
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-thumb{
+  border-radius: 3px;
+  background:rgb(177, 54, 5);
+}
+::-webkit-scrollbar-track{
+  border-radius: 1.5px;
+  border: 1px dashed rgb(177, 54, 5);
+  background: transparent;
+}
 /* :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
