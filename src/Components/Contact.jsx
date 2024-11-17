@@ -113,11 +113,11 @@ const Contact = () => {
           />
           {/* ==================== textarea ============ */}
           <div
-            className={`px-4 py-2 mt-2 rounded-xl w-full flex items-center justify-between border border-white/20 relative mb-2`}
+            className={`px-4 py-2 mt-2 rounded-xl w-full flex items-center justify-between border border-white/30 relative mb-2`}
           >
             <label
               htmlFor="message"
-              className="text-xs text-gray-700/80 font-bold bg-white/40 z-10 py-1 px-2 rounded-md absolute -top-3 left-2 "
+              className="text-xs text-gray-700/80 font-bold bg-white/30 backdrop-blur-lg z-10 py-1 px-2 rounded-md absolute -top-3 left-2 "
             >
               {" "}
               message{" "}

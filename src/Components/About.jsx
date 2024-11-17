@@ -12,18 +12,19 @@ const About = () => {
           My Introduction
         </p>
       </span>
-      <div className="bottom w-full h-auto flex flex-col sm:flex-row ">
-        <div className=" left w-full  sm:w-1/2 h-full flex px-6 py-4  items-center justify-center">
-          <div className="img overflow-hidden w-[400px] h-[300px] min-h-[150px] rounded-[8%] border-2 border-dashed border-amber-800">
+      <div className="bottom w-full h-auto flex flex-col md:flex-row ">
+        <div className=" left w-full  md:w-1/2 h-full flex px-6 py-4  items-center justify-center">
+          <div className="img size-[320px] sm:size-[380px] min-h-[150px] rounded-[8%] border-2 border-none ">
+            {/* w-[400px] h-[300px]  border-dashed  border-amber-800  */}
             <img
-              src="/imgMe.PNG"
-              alt="myimage"
+              src="/imgMe.png"
+              alt="my image"
               loading="lazy"
               className="w-full h-full object-cover"
             />
           </div>
         </div>
-        <div className=" right w-full  sm:w-1/2 h-full flex-col sm:px-10 py-4 px-8 gap-4">
+        <div className=" right w-full  md:w-1/2 h-full flex-col md:px-10 py-4 px-8 gap-4">
           <div className="cards w-full flex items-center justify-evenly my-4 ">
             <Link to={"/education"} className="bg-white/10 m-1 card p-4 md:flex flex-col gap-1 items-center justify-center border border-white/30 rounded-lg max-w-[150px]">
               <span className="text-sm font-semibold "> Post graduated </span>
@@ -46,7 +47,7 @@ const About = () => {
           </div>
           <BigButton
             Children={<> <Link target="_blank"
-              to={"https://drive.google.com/drive/folders/1N0ecqW6kpW3zt15w87R0iBawGBwGS1S6?usp=sharing"}
+              to={"https://drive.google.com/file/d/1cntUULnMER5wH-5QqwuTl9PV3C-XjDD_/view?usp=sharing"}
               > Download CV 📌</Link>
               </>}
                  className="rounded-lg duration-200 hover:bg-black"

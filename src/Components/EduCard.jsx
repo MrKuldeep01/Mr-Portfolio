@@ -17,7 +17,7 @@ const EducationCard = ({degreename,percent="64",uniname,session="year-year",desc
         {degreename}
       </h2>
       <p style={{width:`${percentNum}`}} className={`h-[2px] rounded-full bg-black absolute -bottom-[2px] left-0`}></p>
-      <span className=" absolute -bottom-3 right-0 text-xs text-black/60 font-semibold bg-white/60 px-2 py-1 rounded-lg ">
+      <span className=" absolute -bottom-3 right-0 text-xs text-gray-800/70 border-2 border-dashed border-slate-800/70 backdrop-blur-lg font-semibold bg-white/30 px-2 py-1 rounded-lg ">
         {percentNum}
       </span>
     </div>
