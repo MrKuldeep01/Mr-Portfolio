@@ -17,7 +17,7 @@ const About = () => {
           <div className="img size-[320px] sm:size-[380px] min-h-[150px] rounded-[8%] border-2 border-none ">
             {/* w-[400px] h-[300px]  border-dashed  border-amber-800  */}
             <img
-              src="/imgMe.png"
+              src="/imgMe.PNG"
               alt="my image"
               loading="lazy"
               className="w-full h-full object-cover"
