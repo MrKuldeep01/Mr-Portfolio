@@ -1,23 +1,28 @@
 import React from "react";
-import { Link } from "react-router-dom";
-const ContactCard = ({linkicon,link,linktype,linkid}) => {
-  return link && linkid && (
-    <Link to={link} className= "border border-gray-700/40 flex flex-col rounded-lg px-2 py-4 m-2 text-center justify-between w-auto md:w-[180px] md:max-h-[145px]  ">
-      {linkicon ? 
-      <span className="block icons text-lg font-bold pt-1 text-black/90">{linkicon}</span> : ""
-    }
-    {linktype ? 
-      <span className="block linktype text-sm pt-1 font-semibold text-slate-800/80">
-        {linktype}
-      </span>: ""
-      }
 
-      <span className="block linkid text-xs pt-1 font-semibold text-slate-800/50">
-      {linkid}
+const ContactCard = ({linkicon, link, linktype, linkid}) => {
+  return link && linkid ? (
+    <a 
+      href={link} 
+      target={link.startsWith('mailto:') || link.startsWith('tel:') ? '_self' : '_blank'}
+      rel={link.startsWith('mailto:') || link.startsWith('tel:') ? '' : 'noopener noreferrer'}
+      className="group border border-white/40 bg-white/20 backdrop-blur-md flex flex-col rounded-xl px-4 py-5 text-center justify-between w-full hover:bg-white/30 hover:scale-105 transition-all duration-300 shadow-md hover:shadow-lg"
+    >
+      {linkicon && (
+        <span className="block icons text-3xl font-bold pt-1 text-slate-900 mb-2 group-hover:scale-110 transition-transform duration-300">
+          {linkicon}
+        </span>
+      )}
+      {linktype && (
+        <span className="block linktype text-base pt-1 font-bold text-slate-900 mb-1">
+          {linktype}
+        </span>
+      )}
+      <span className="block linkid text-sm pt-1 font-medium text-slate-700/80 break-all">
+        {linkid}
       </span>
-
-    </Link>
-  );
+    </a>
+  ) : null;
 };
 
 export default ContactCard;

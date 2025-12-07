@@ -1,5 +1,4 @@
-import React from "react";
-import { Link, useNavigate } from "react-router-dom";
+import React, { useState } from "react";
 
 const ProjectCard = ({
   codelink = "#",
@@ -9,35 +8,61 @@ const ProjectCard = ({
   bgimg = "/webicon.svg",
   className = "",
 }) => {
-  const navigate = useNavigate();
+  const [isHovered, setIsHovered] = useState(false);
+
   return (
-    <Link
-      to={codelink}
-      title={desc}
-      className={`left-most hover:scale-[1.06] duration-300 shadow-white hover:shadow-lg  px-6 py-4 w-[95%] md:w-[50%] md:min-w-[50%] h-[320px] flex-col items-center border border-black/30 rounded-lg justify-center overflow-hidden relative cursor-pointer ${className}`}
+    <div
+      className={`group relative w-full h-[400px] flex-col items-center border border-white/30 rounded-2xl justify-between overflow-hidden cursor-pointer bg-white/10 backdrop-blur-md hover:bg-white/20 transition-all duration-500 hover:scale-105 hover:shadow-2xl ${className}`}
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
     >
-      <img
-        src={bgimg}
-        className="absolute top-0 left-0 -z-10 h-full w-full object-cover rounded-lg opacity-70"
-      />
-      <h2 className="skillheader capitalize mb-4 w-full text-center text-xl font-bold px-4 py-1 rounded-t-lg bg-black/60 text-white/70">
-        {title}
-      </h2>
-      <span className="linkes w-full absolute bottom-0 left-0 flex items-center justify-between px-4 py-2 bg-black/30">
-        <Link
-          to={codelink}
-          className="text-gray-200 font-semibold text-sm hover:text-white hover:scale-[1.06] duration-100 outline-none  "
-        >
-          Code
-        </Link>
-        <Link
-          to={demolink}
-          className="text-gray-200 font-semibold text-sm hover:text-white hover:scale-[1.06] duration-100 outline-none "
-        >
-          Demo
-        </Link>
-      </span>
-    </Link>
+      <div className="relative h-full w-full">
+        <img
+          src={bgimg}
+          alt={title}
+          className={`absolute top-0 left-0 h-full w-full object-cover rounded-2xl transition-all duration-500 ${
+            isHovered ? 'opacity-40 scale-110' : 'opacity-60'
+          }`}
+        />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent rounded-2xl"></div>
+        
+        <div className="relative h-full flex flex-col justify-between p-6">
+          <div>
+            <h2 className="text-2xl font-bold text-white mb-3 capitalize">
+              {title}
+            </h2>
+            <p className={`text-sm text-white/80 leading-relaxed transition-all duration-500 ${
+              isHovered ? 'opacity-100 max-h-48 overflow-y-auto' : 'opacity-70 max-h-24 overflow-hidden'
+            }`}>
+              {desc}
+            </p>
+          </div>
+          
+          <div className="flex items-center justify-between gap-4 mt-4 pt-4 border-t border-white/20">
+            <a
+              href={codelink}
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={(e) => e.stopPropagation()}
+              className="flex-1 bg-white/20 hover:bg-white/30 backdrop-blur-sm text-white font-semibold text-sm px-4 py-2 rounded-lg text-center transition-all duration-300 hover:scale-105 flex items-center justify-center gap-2"
+            >
+              <i className="ri-code-s-slash-line"></i>
+              Code
+            </a>
+            <a
+              href={demolink}
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={(e) => e.stopPropagation()}
+              className="flex-1 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-500 hover:to-purple-500 text-white font-semibold text-sm px-4 py-2 rounded-lg text-center transition-all duration-300 hover:scale-105 flex items-center justify-center gap-2"
+            >
+              <i className="ri-external-link-line"></i>
+              Demo
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
   );
 };
 

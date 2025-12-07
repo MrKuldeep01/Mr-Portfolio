@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useId } from "react";
 
 const Input = ({
   label,
@@ -7,17 +7,28 @@ const Input = ({
   placeholder = "",
   className = "",
   parentClassName = "",
+  value,
   ...props
 }) => {
-  const id = String(Date.now());
+  const id = useId();
+  const inputId = `${id}-${name}`;
+
   return (
-    <div className={`px-4 py-2 mt-2 rounded-xl w-full flex items-center justify-between border border-white/30 relative ${parentClassName}`}>
-      {label && <label htmlFor={id+name}  className="text-xs text-gray-700/90 font-bold backdrop-blur-lg bg-white/30 z-10 py-1 px-2 rounded-md absolute -top-3 left-2 " >  {label} </label>}
+    <div className={`px-4 py-2 mt-2 rounded-xl w-full flex items-center justify-between border border-white/30 relative bg-white/10 backdrop-blur-sm ${parentClassName}`}>
+      {label && (
+        <label 
+          htmlFor={inputId}
+          className="text-xs text-slate-900/90 font-bold backdrop-blur-lg bg-white/40 z-10 py-1 px-3 rounded-md absolute -top-3 left-2 shadow-sm"
+        >
+          {label}
+        </label>
+      )}
       <input
-      id={id+name}
+        id={inputId}
         name={name}
         type={type}
-        className={`px-4 py-2 bg-transparent border-none w-full outline-none text-white/70 text-base font-semibold placeholder:text-white/70 ${className} `}
+        value={value}
+        className={`px-4 py-3 bg-transparent border-none w-full outline-none text-slate-900/90 text-base font-medium placeholder:text-slate-700/60 focus:ring-2 focus:ring-blue-500/50 rounded-lg transition-all duration-300 ${className}`}
         placeholder={placeholder}
         {...props}
       />
